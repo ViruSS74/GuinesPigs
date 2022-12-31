@@ -1,0 +1,301 @@
+@font-face {
+	font-family: roboto;
+	src: url("fonts/roboto.ttf");
+}
+
+.body {
+	font-family: roboto, sans-serif;
+	padding: 0px;
+}
+
+.header {
+	max-width: 1380px;
+	background-color: #fcb424;
+	border-bottom: 2px solid gray;
+	padding: 0px;
+	display: flex;
+	align-items: center;
+}
+
+.head-info {
+	max-width: 1200px;
+	padding: 0px;
+	display: flex;
+	align-items: left;
+}
+
+.logo2 img {
+	max-width: 100px;
+	max-height: 100px;
+	padding: 30px 10px 10px;
+	vertical-align: centre;
+}
+
+.title {
+	max-width: 1200px;
+	padding: 0px;
+	display: block;
+	align-items: center;
+}
+
+h1 {	
+	font-size: 28pt;
+	font-weight: 700;
+}
+h3 {
+	font-size: 18pt;
+	font-weight: 400;
+}
+
+#navbar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-radius: 5px;
+  width: 1380px;
+  text-align: center;
+  background-color: #fcb424;
+}
+#navbar li {
+	display: inline;
+	}
+#navbar a {
+  color: #000;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  width: 150px;
+}
+#navbar a:hover {
+  border-radius: 20px 5px;
+  background-color: #0066FF;
+}
+
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 200px;
+  left: 10px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+/* контейнер меню */
+.menu__box {
+  transition-duration: .25s;
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 180px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.menu__item {
+  transition-duration: .25s;
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.main {
+	display: block;
+}
+.info {
+	display: flex;
+}
+IMG.displayed {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aside {
+	padding: 20px;
+	margin: 10px;
+	width: 500px;
+}
+.article {
+	padding: 10px;
+	margin: 10px;
+	width: 780px;
+}
+.main-text {
+	font-size: 16pt;
+}
+
+/* css slider */
+.carousel {
+	box-sizing:border-box;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1380px;
+  position: relative;
+  margin: auto;
+  
+}
+/* Hide the images by default */
+.mySlides {
+    display: none;
+	text-align: center;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: darkblue;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: darkblue;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px 10px;
+  margin: 5px;
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/10 etc) */
+.numbertext {
+  color: darkblue;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 10px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/*end css slider*/
+
+.view {
+	max-width: 1380px;
+	max-height:50px;
+	margin: 20px;
+	display: flex;
+	text-align: center;
+}
+
+.footer {
+	max-width: 1380px;
+	background-color: #fcb424;
+	border-bottom: 2px solid gray;
+	padding: 0px;
+	display: flex;
+	align-items: center;
+}
+.foot-info {
+	display: flex;
+	align-items: center;
+}
+.logo img {
+	max-width: 100px;
+	max-height: 100px;
+	padding: 10px;
+	margin: 0px 1050px 2px 0px;
+	vertical-align: centre;
+}
+.title {
+	align-items: right;
+}
